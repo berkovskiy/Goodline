@@ -10,18 +10,15 @@ path = os.path.abspath(__file__)
 
 # Path vriables
 url = r"https://rasp.yandex.ru"
-# path = '/'  # Корневая директория
 tmp_path = r'\task3'  # Диреткория проекта
-log_file = r"\task3.log"  # Название лог файла
+log_file = r"\task3_part_one.log"  # Название лог файла
 
-# os.chdir( path )  # Определение корневой директории
 go_to = "Переход на сайт %s" % (url)
 pro_path = path  # Переменная директории проекта
 screen_dir = r"\screen"  # Путь директории для скриншотов
-screen_path = r"screen\error_screen_"  # Путь директории для скриншотов
 os.makedirs( screen_dir, exist_ok=True )  # Если директории для скринов нет, то он её создаст
 chrome_driver = 'chromedriver.exe'  # Путь до хромдрайвера
-log_path = 'task3.log'  # Путь до логфайла
+log_path = 'task3_part_one.log'  # Путь до логфайла
 
 name_service = 'Задание 3 часть первая'
 
@@ -61,7 +58,7 @@ while True:
 
         print( "Путь до автотеста - ", pro_path )
         start_time = int( time_fu() )
-        # Send name server
+
         s = 1
         logs( ok, "Путь до автотеста - " + pro_path )
         logs( ok, "Наименование сценария - " + name_service )
